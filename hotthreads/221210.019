@@ -1,0 +1,920 @@
+::: {osbbackup101-monit-backup1_data2}{QQ-NoPkXSgOhN2CRJcA_IQ}{uUb7r3aSR1makfeZjU0gGA}{132.32.3.102}{132.32.3.102:9302}{dir}{node_attr=default, shard_indexing_pressure_enabled=true, landb_service_name_IP=IP413}
+   Hot threads at 2024-09-09T20:12:10.073Z, interval=500ms, busiestThreads=9999, ignoreIdleThreads=true:
+   
+   80.6% (403.1ms out of 500ms) cpu usage by thread 'opensearch[osbbackup101-monit-backup1_data2][search][T#7]'
+     10/10 snapshots sharing following 68 elements
+       app//org.opensearch.search.aggregations.bucket.terms.LongKeyedBucketOrds$FromMany$1.next(LongKeyedBucketOrds.java:295)
+       app//org.opensearch.search.aggregations.bucket.BucketsAggregator.buildAggregationsForVariableBuckets(BucketsAggregator.java:402)
+       app//org.opensearch.search.aggregations.bucket.histogram.DateHistogramAggregator.buildAggregations(DateHistogramAggregator.java:208)
+       app//org.opensearch.search.aggregations.bucket.BucketsAggregator.buildSubAggsForBuckets(BucketsAggregator.java:220)
+       app//org.opensearch.search.aggregations.bucket.BucketsAggregator.buildSubAggsForAllBuckets(BucketsAggregator.java:286)
+       app//org.opensearch.search.aggregations.bucket.terms.GlobalOrdinalsStringTermsAggregator.access$400(GlobalOrdinalsStringTermsAggregator.java:90)
+       app//org.opensearch.search.aggregations.bucket.terms.GlobalOrdinalsStringTermsAggregator$StandardTermsResults.buildSubAggs(GlobalOrdinalsStringTermsAggregator.java:900)
+       app//org.opensearch.search.aggregations.bucket.terms.GlobalOrdinalsStringTermsAggregator$StandardTermsResults.buildSubAggs(GlobalOrdinalsStringTermsAggregator.java:847)
+       app//org.opensearch.search.aggregations.bucket.terms.GlobalOrdinalsStringTermsAggregator$ResultStrategy.buildAggregations(GlobalOrdinalsStringTermsAggregator.java:762)
+       app//org.opensearch.search.aggregations.bucket.terms.GlobalOrdinalsStringTermsAggregator.buildAggregations(GlobalOrdinalsStringTermsAggregator.java:316)
+       app//org.opensearch.search.aggregations.bucket.BucketsAggregator.buildSubAggsForBuckets(BucketsAggregator.java:220)
+       app//org.opensearch.search.aggregations.bucket.BucketsAggregator.buildSubAggsForAllBuckets(BucketsAggregator.java:286)
+       app//org.opensearch.search.aggregations.bucket.terms.GlobalOrdinalsStringTermsAggregator.access$400(GlobalOrdinalsStringTermsAggregator.java:90)
+       app//org.opensearch.search.aggregations.bucket.terms.GlobalOrdinalsStringTermsAggregator$StandardTermsResults.buildSubAggs(GlobalOrdinalsStringTermsAggregator.java:900)
+       app//org.opensearch.search.aggregations.bucket.terms.GlobalOrdinalsStringTermsAggregator$StandardTermsResults.buildSubAggs(GlobalOrdinalsStringTermsAggregator.java:847)
+       app//org.opensearch.search.aggregations.bucket.terms.GlobalOrdinalsStringTermsAggregator$ResultStrategy.buildAggregations(GlobalOrdinalsStringTermsAggregator.java:762)
+       app//org.opensearch.search.aggregations.bucket.terms.GlobalOrdinalsStringTermsAggregator.buildAggregations(GlobalOrdinalsStringTermsAggregator.java:316)
+       app//org.opensearch.search.aggregations.bucket.BucketsAggregator.buildSubAggsForBuckets(BucketsAggregator.java:220)
+       app//org.opensearch.search.aggregations.bucket.BucketsAggregator.buildSubAggsForAllBuckets(BucketsAggregator.java:286)
+       app//org.opensearch.search.aggregations.bucket.terms.GlobalOrdinalsStringTermsAggregator.access$400(GlobalOrdinalsStringTermsAggregator.java:90)
+       app//org.opensearch.search.aggregations.bucket.terms.GlobalOrdinalsStringTermsAggregator$StandardTermsResults.buildSubAggs(GlobalOrdinalsStringTermsAggregator.java:900)
+       app//org.opensearch.search.aggregations.bucket.terms.GlobalOrdinalsStringTermsAggregator$StandardTermsResults.buildSubAggs(GlobalOrdinalsStringTermsAggregator.java:847)
+       app//org.opensearch.search.aggregations.bucket.terms.GlobalOrdinalsStringTermsAggregator$ResultStrategy.buildAggregations(GlobalOrdinalsStringTermsAggregator.java:762)
+       app//org.opensearch.search.aggregations.bucket.terms.GlobalOrdinalsStringTermsAggregator.buildAggregations(GlobalOrdinalsStringTermsAggregator.java:316)
+       app//org.opensearch.search.aggregations.Aggregator.buildTopLevel(Aggregator.java:205)
+       app//org.opensearch.search.aggregations.BucketCollectorProcessor.processPostCollection(BucketCollectorProcessor.java:78)
+       app//org.opensearch.search.internal.ContextIndexSearcher.search(ContextIndexSearcher.java:286)
+       app//org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:552)
+       app//org.opensearch.search.query.QueryPhase.searchWithCollector(QueryPhase.java:355)
+       app//org.opensearch.search.query.QueryPhase$DefaultQueryPhaseSearcher.searchWithCollector(QueryPhase.java:462)
+       app//org.opensearch.search.query.QueryPhase$DefaultQueryPhaseSearcher.searchWithCollector(QueryPhase.java:450)
+       app//org.opensearch.search.query.QueryPhase$DefaultQueryPhaseSearcher.searchWith(QueryPhase.java:432)
+       app//org.opensearch.search.query.QueryPhaseSearcherWrapper.searchWith(QueryPhaseSearcherWrapper.java:60)
+       org.opensearch.neuralsearch.search.query.HybridQueryPhaseSearcher.searchWith(HybridQueryPhaseSearcher.java:61)
+       app//org.opensearch.search.query.QueryPhase.executeInternal(QueryPhase.java:282)
+       app//org.opensearch.search.query.QueryPhase.execute(QueryPhase.java:155)
+       app//org.opensearch.indices.IndicesService.lambda$loadIntoContext$24(IndicesService.java:1703)
+       app//org.opensearch.indices.IndicesService$$Lambda/0x00007fcd292fd460.accept(Unknown Source)
+       app//org.opensearch.indices.IndicesService.lambda$cacheShardLevelResult$25(IndicesService.java:1764)
+       app//org.opensearch.indices.IndicesService$$Lambda/0x00007fcd292f8800.get(Unknown Source)
+       app//org.opensearch.indices.IndicesRequestCache$Loader.load(IndicesRequestCache.java:345)
+       app//org.opensearch.indices.IndicesRequestCache$Loader.load(IndicesRequestCache.java:328)
+       app//org.opensearch.common.cache.store.OpenSearchOnHeapCache.lambda$computeIfAbsent$0(OpenSearchOnHeapCache.java:98)
+       app//org.opensearch.common.cache.store.OpenSearchOnHeapCache$$Lambda/0x00007fcd292f0a50.load(Unknown Source)
+       app//org.opensearch.common.cache.Cache.compute(Cache.java:483)
+       app//org.opensearch.common.cache.Cache.computeIfAbsent(Cache.java:434)
+       app//org.opensearch.common.cache.store.OpenSearchOnHeapCache.computeIfAbsent(OpenSearchOnHeapCache.java:98)
+       app//org.opensearch.indices.IndicesRequestCache.getOrCompute(IndicesRequestCache.java:287)
+       app//org.opensearch.indices.IndicesService.cacheShardLevelResult(IndicesService.java:1770)
+       app//org.opensearch.indices.IndicesService.loadIntoContext(IndicesService.java:1701)
+       app//org.opensearch.search.SearchService.loadOrExecuteQueryPhase(SearchService.java:587)
+       app//org.opensearch.search.SearchService.executeQueryPhase(SearchService.java:653)
+       app//org.opensearch.search.SearchService$2.lambda$onResponse$0(SearchService.java:622)
+       app//org.opensearch.search.SearchService$2$$Lambda/0x00007fcd29204ce0.get(Unknown Source)
+       app//org.opensearch.search.SearchService$$Lambda/0x00007fcd29205120.get(Unknown Source)
+       app//org.opensearch.action.ActionRunnable.lambda$supply$0(ActionRunnable.java:74)
+       app//org.opensearch.action.ActionRunnable$$Lambda/0x00007fcd291c21a8.accept(Unknown Source)
+       app//org.opensearch.action.ActionRunnable$2.doRun(ActionRunnable.java:89)
+       app//org.opensearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:52)
+       app//org.opensearch.threadpool.TaskAwareRunnable.doRun(TaskAwareRunnable.java:78)
+       app//org.opensearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:52)
+       app//org.opensearch.common.util.concurrent.TimedRunnable.doRun(TimedRunnable.java:59)
+       app//org.opensearch.common.util.concurrent.ThreadContext$ContextPreservingAbstractRunnable.doRun(ThreadContext.java:941)
+       app//org.opensearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:52)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+       java.base@21.0.3/java.lang.Thread.runWith(Thread.java:1596)
+       java.base@21.0.3/java.lang.Thread.run(Thread.java:1583)
+   
+    0.2% (784.3micros out of 500ms) cpu usage by thread 'Attach Listener'
+     unique snapshot
+     unique snapshot
+     unique snapshot
+     unique snapshot
+     unique snapshot
+     unique snapshot
+     unique snapshot
+     unique snapshot
+     unique snapshot
+     unique snapshot
+   
+    0.0% (10.1micros out of 500ms) cpu usage by thread 'ScheduledMetricCollectorsExecutor'
+     10/10 snapshots sharing following 3 elements
+       java.base@21.0.3/java.lang.Thread.sleep0(Native Method)
+       java.base@21.0.3/java.lang.Thread.sleep(Thread.java:509)
+       org.opensearch.performanceanalyzer.commons.collectors.ScheduledMetricCollectorsExecutor.run(ScheduledMetricCollectorsExecutor.java:114)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'opensearch[osbbackup101-monit-backup1_data2][normal_transfer_queue_consumer][T#23]'
+     10/10 snapshots sharing following 15 elements
+       java.base@21.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+       java.base@21.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.consume(SizeBasedBlockingQ.java:180)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.run(SizeBasedBlockingQ.java:161)
+       java.base@21.0.3/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+       java.base@21.0.3/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+       app//org.opensearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:882)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+       java.base@21.0.3/java.lang.Thread.runWith(Thread.java:1596)
+       java.base@21.0.3/java.lang.Thread.run(Thread.java:1583)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'opensearch[osbbackup101-monit-backup1_data2][normal_transfer_queue_consumer][T#24]'
+     10/10 snapshots sharing following 15 elements
+       java.base@21.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+       java.base@21.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.consume(SizeBasedBlockingQ.java:180)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.run(SizeBasedBlockingQ.java:161)
+       java.base@21.0.3/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+       java.base@21.0.3/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+       app//org.opensearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:882)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+       java.base@21.0.3/java.lang.Thread.runWith(Thread.java:1596)
+       java.base@21.0.3/java.lang.Thread.run(Thread.java:1583)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'opensearch[osbbackup101-monit-backup1_data2][normal_transfer_queue_consumer][T#25]'
+     10/10 snapshots sharing following 15 elements
+       java.base@21.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+       java.base@21.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.consume(SizeBasedBlockingQ.java:180)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.run(SizeBasedBlockingQ.java:161)
+       java.base@21.0.3/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+       java.base@21.0.3/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+       app//org.opensearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:882)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+       java.base@21.0.3/java.lang.Thread.runWith(Thread.java:1596)
+       java.base@21.0.3/java.lang.Thread.run(Thread.java:1583)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'opensearch[osbbackup101-monit-backup1_data2][normal_transfer_queue_consumer][T#26]'
+     10/10 snapshots sharing following 15 elements
+       java.base@21.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+       java.base@21.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.consume(SizeBasedBlockingQ.java:180)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.run(SizeBasedBlockingQ.java:161)
+       java.base@21.0.3/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+       java.base@21.0.3/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+       app//org.opensearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:882)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+       java.base@21.0.3/java.lang.Thread.runWith(Thread.java:1596)
+       java.base@21.0.3/java.lang.Thread.run(Thread.java:1583)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'opensearch[osbbackup101-monit-backup1_data2][normal_transfer_queue_consumer][T#27]'
+     10/10 snapshots sharing following 15 elements
+       java.base@21.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+       java.base@21.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.consume(SizeBasedBlockingQ.java:180)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.run(SizeBasedBlockingQ.java:161)
+       java.base@21.0.3/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+       java.base@21.0.3/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+       app//org.opensearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:882)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+       java.base@21.0.3/java.lang.Thread.runWith(Thread.java:1596)
+       java.base@21.0.3/java.lang.Thread.run(Thread.java:1583)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'opensearch[osbbackup101-monit-backup1_data2][normal_transfer_queue_consumer][T#28]'
+     10/10 snapshots sharing following 15 elements
+       java.base@21.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+       java.base@21.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.consume(SizeBasedBlockingQ.java:180)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.run(SizeBasedBlockingQ.java:161)
+       java.base@21.0.3/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+       java.base@21.0.3/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+       app//org.opensearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:882)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+       java.base@21.0.3/java.lang.Thread.runWith(Thread.java:1596)
+       java.base@21.0.3/java.lang.Thread.run(Thread.java:1583)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'opensearch[osbbackup101-monit-backup1_data2][normal_transfer_queue_consumer][T#29]'
+     10/10 snapshots sharing following 15 elements
+       java.base@21.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+       java.base@21.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.consume(SizeBasedBlockingQ.java:180)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.run(SizeBasedBlockingQ.java:161)
+       java.base@21.0.3/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+       java.base@21.0.3/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+       app//org.opensearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:882)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+       java.base@21.0.3/java.lang.Thread.runWith(Thread.java:1596)
+       java.base@21.0.3/java.lang.Thread.run(Thread.java:1583)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'opensearch[osbbackup101-monit-backup1_data2][normal_transfer_queue_consumer][T#30]'
+     10/10 snapshots sharing following 15 elements
+       java.base@21.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+       java.base@21.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.consume(SizeBasedBlockingQ.java:180)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.run(SizeBasedBlockingQ.java:161)
+       java.base@21.0.3/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+       java.base@21.0.3/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+       app//org.opensearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:882)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+       java.base@21.0.3/java.lang.Thread.runWith(Thread.java:1596)
+       java.base@21.0.3/java.lang.Thread.run(Thread.java:1583)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'opensearch[osbbackup101-monit-backup1_data2][normal_transfer_queue_consumer][T#31]'
+     10/10 snapshots sharing following 15 elements
+       java.base@21.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+       java.base@21.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.consume(SizeBasedBlockingQ.java:180)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.run(SizeBasedBlockingQ.java:161)
+       java.base@21.0.3/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+       java.base@21.0.3/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+       app//org.opensearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:882)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+       java.base@21.0.3/java.lang.Thread.runWith(Thread.java:1596)
+       java.base@21.0.3/java.lang.Thread.run(Thread.java:1583)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'opensearch[osbbackup101-monit-backup1_data2][normal_transfer_queue_consumer][T#32]'
+     10/10 snapshots sharing following 15 elements
+       java.base@21.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+       java.base@21.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.consume(SizeBasedBlockingQ.java:180)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.run(SizeBasedBlockingQ.java:161)
+       java.base@21.0.3/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+       java.base@21.0.3/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+       app//org.opensearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:882)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+       java.base@21.0.3/java.lang.Thread.runWith(Thread.java:1596)
+       java.base@21.0.3/java.lang.Thread.run(Thread.java:1583)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'opensearch[osbbackup101-monit-backup1_data2][low_transfer_queue_consumer][T#1]'
+     10/10 snapshots sharing following 15 elements
+       java.base@21.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+       java.base@21.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.consume(SizeBasedBlockingQ.java:180)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.run(SizeBasedBlockingQ.java:161)
+       java.base@21.0.3/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+       java.base@21.0.3/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+       app//org.opensearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:882)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+       java.base@21.0.3/java.lang.Thread.runWith(Thread.java:1596)
+       java.base@21.0.3/java.lang.Thread.run(Thread.java:1583)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'opensearch[osbbackup101-monit-backup1_data2][low_transfer_queue_consumer][T#2]'
+     10/10 snapshots sharing following 15 elements
+       java.base@21.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+       java.base@21.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.consume(SizeBasedBlockingQ.java:180)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.run(SizeBasedBlockingQ.java:161)
+       java.base@21.0.3/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+       java.base@21.0.3/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+       app//org.opensearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:882)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+       java.base@21.0.3/java.lang.Thread.runWith(Thread.java:1596)
+       java.base@21.0.3/java.lang.Thread.run(Thread.java:1583)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'opensearch[osbbackup101-monit-backup1_data2][low_transfer_queue_consumer][T#3]'
+     10/10 snapshots sharing following 15 elements
+       java.base@21.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+       java.base@21.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.consume(SizeBasedBlockingQ.java:180)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.run(SizeBasedBlockingQ.java:161)
+       java.base@21.0.3/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+       java.base@21.0.3/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+       app//org.opensearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:882)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+       java.base@21.0.3/java.lang.Thread.runWith(Thread.java:1596)
+       java.base@21.0.3/java.lang.Thread.run(Thread.java:1583)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'opensearch[osbbackup101-monit-backup1_data2][low_transfer_queue_consumer][T#4]'
+     10/10 snapshots sharing following 15 elements
+       java.base@21.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+       java.base@21.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.consume(SizeBasedBlockingQ.java:180)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.run(SizeBasedBlockingQ.java:161)
+       java.base@21.0.3/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+       java.base@21.0.3/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+       app//org.opensearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:882)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+       java.base@21.0.3/java.lang.Thread.runWith(Thread.java:1596)
+       java.base@21.0.3/java.lang.Thread.run(Thread.java:1583)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'opensearch[osbbackup101-monit-backup1_data2][low_transfer_queue_consumer][T#5]'
+     10/10 snapshots sharing following 15 elements
+       java.base@21.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+       java.base@21.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.consume(SizeBasedBlockingQ.java:180)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.run(SizeBasedBlockingQ.java:161)
+       java.base@21.0.3/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+       java.base@21.0.3/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+       app//org.opensearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:882)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+       java.base@21.0.3/java.lang.Thread.runWith(Thread.java:1596)
+       java.base@21.0.3/java.lang.Thread.run(Thread.java:1583)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'opensearch[osbbackup101-monit-backup1_data2][low_transfer_queue_consumer][T#6]'
+     10/10 snapshots sharing following 15 elements
+       java.base@21.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+       java.base@21.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.consume(SizeBasedBlockingQ.java:180)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.run(SizeBasedBlockingQ.java:161)
+       java.base@21.0.3/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+       java.base@21.0.3/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+       app//org.opensearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:882)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+       java.base@21.0.3/java.lang.Thread.runWith(Thread.java:1596)
+       java.base@21.0.3/java.lang.Thread.run(Thread.java:1583)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'opensearch[osbbackup101-monit-backup1_data2][low_transfer_queue_consumer][T#7]'
+     10/10 snapshots sharing following 15 elements
+       java.base@21.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+       java.base@21.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.consume(SizeBasedBlockingQ.java:180)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.run(SizeBasedBlockingQ.java:161)
+       java.base@21.0.3/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+       java.base@21.0.3/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+       app//org.opensearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:882)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+       java.base@21.0.3/java.lang.Thread.runWith(Thread.java:1596)
+       java.base@21.0.3/java.lang.Thread.run(Thread.java:1583)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'opensearch[osbbackup101-monit-backup1_data2][low_transfer_queue_consumer][T#8]'
+     10/10 snapshots sharing following 15 elements
+       java.base@21.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+       java.base@21.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.consume(SizeBasedBlockingQ.java:180)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.run(SizeBasedBlockingQ.java:161)
+       java.base@21.0.3/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+       java.base@21.0.3/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+       app//org.opensearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:882)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+       java.base@21.0.3/java.lang.Thread.runWith(Thread.java:1596)
+       java.base@21.0.3/java.lang.Thread.run(Thread.java:1583)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'opensearch[osbbackup101-monit-backup1_data2][low_transfer_queue_consumer][T#9]'
+     10/10 snapshots sharing following 15 elements
+       java.base@21.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+       java.base@21.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.consume(SizeBasedBlockingQ.java:180)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.run(SizeBasedBlockingQ.java:161)
+       java.base@21.0.3/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+       java.base@21.0.3/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+       app//org.opensearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:882)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+       java.base@21.0.3/java.lang.Thread.runWith(Thread.java:1596)
+       java.base@21.0.3/java.lang.Thread.run(Thread.java:1583)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'opensearch[osbbackup101-monit-backup1_data2][normal_transfer_queue_consumer][T#11]'
+     10/10 snapshots sharing following 15 elements
+       java.base@21.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+       java.base@21.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.consume(SizeBasedBlockingQ.java:180)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.run(SizeBasedBlockingQ.java:161)
+       java.base@21.0.3/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+       java.base@21.0.3/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+       app//org.opensearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:882)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+       java.base@21.0.3/java.lang.Thread.runWith(Thread.java:1596)
+       java.base@21.0.3/java.lang.Thread.run(Thread.java:1583)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'opensearch[osbbackup101-monit-backup1_data2][normal_transfer_queue_consumer][T#22]'
+     10/10 snapshots sharing following 15 elements
+       java.base@21.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+       java.base@21.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.consume(SizeBasedBlockingQ.java:180)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.run(SizeBasedBlockingQ.java:161)
+       java.base@21.0.3/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+       java.base@21.0.3/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+       app//org.opensearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:882)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+       java.base@21.0.3/java.lang.Thread.runWith(Thread.java:1596)
+       java.base@21.0.3/java.lang.Thread.run(Thread.java:1583)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'opensearch[osbbackup101-monit-backup1_data2][normal_transfer_queue_consumer][T#21]'
+     10/10 snapshots sharing following 15 elements
+       java.base@21.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+       java.base@21.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.consume(SizeBasedBlockingQ.java:180)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.run(SizeBasedBlockingQ.java:161)
+       java.base@21.0.3/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+       java.base@21.0.3/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+       app//org.opensearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:882)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+       java.base@21.0.3/java.lang.Thread.runWith(Thread.java:1596)
+       java.base@21.0.3/java.lang.Thread.run(Thread.java:1583)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'opensearch[osbbackup101-monit-backup1_data2][normal_transfer_queue_consumer][T#20]'
+     10/10 snapshots sharing following 15 elements
+       java.base@21.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+       java.base@21.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.consume(SizeBasedBlockingQ.java:180)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.run(SizeBasedBlockingQ.java:161)
+       java.base@21.0.3/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+       java.base@21.0.3/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+       app//org.opensearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:882)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+       java.base@21.0.3/java.lang.Thread.runWith(Thread.java:1596)
+       java.base@21.0.3/java.lang.Thread.run(Thread.java:1583)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'opensearch[osbbackup101-monit-backup1_data2][normal_transfer_queue_consumer][T#19]'
+     10/10 snapshots sharing following 15 elements
+       java.base@21.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+       java.base@21.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.consume(SizeBasedBlockingQ.java:180)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.run(SizeBasedBlockingQ.java:161)
+       java.base@21.0.3/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+       java.base@21.0.3/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+       app//org.opensearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:882)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+       java.base@21.0.3/java.lang.Thread.runWith(Thread.java:1596)
+       java.base@21.0.3/java.lang.Thread.run(Thread.java:1583)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'opensearch[osbbackup101-monit-backup1_data2][normal_transfer_queue_consumer][T#18]'
+     10/10 snapshots sharing following 15 elements
+       java.base@21.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+       java.base@21.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.consume(SizeBasedBlockingQ.java:180)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.run(SizeBasedBlockingQ.java:161)
+       java.base@21.0.3/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+       java.base@21.0.3/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+       app//org.opensearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:882)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+       java.base@21.0.3/java.lang.Thread.runWith(Thread.java:1596)
+       java.base@21.0.3/java.lang.Thread.run(Thread.java:1583)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'opensearch[osbbackup101-monit-backup1_data2][normal_transfer_queue_consumer][T#17]'
+     10/10 snapshots sharing following 15 elements
+       java.base@21.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+       java.base@21.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.consume(SizeBasedBlockingQ.java:180)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.run(SizeBasedBlockingQ.java:161)
+       java.base@21.0.3/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+       java.base@21.0.3/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+       app//org.opensearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:882)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+       java.base@21.0.3/java.lang.Thread.runWith(Thread.java:1596)
+       java.base@21.0.3/java.lang.Thread.run(Thread.java:1583)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'opensearch[osbbackup101-monit-backup1_data2][normal_transfer_queue_consumer][T#16]'
+     10/10 snapshots sharing following 15 elements
+       java.base@21.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+       java.base@21.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.consume(SizeBasedBlockingQ.java:180)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.run(SizeBasedBlockingQ.java:161)
+       java.base@21.0.3/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+       java.base@21.0.3/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+       app//org.opensearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:882)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+       java.base@21.0.3/java.lang.Thread.runWith(Thread.java:1596)
+       java.base@21.0.3/java.lang.Thread.run(Thread.java:1583)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'opensearch[osbbackup101-monit-backup1_data2][normal_transfer_queue_consumer][T#15]'
+     10/10 snapshots sharing following 15 elements
+       java.base@21.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+       java.base@21.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.consume(SizeBasedBlockingQ.java:180)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.run(SizeBasedBlockingQ.java:161)
+       java.base@21.0.3/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+       java.base@21.0.3/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+       app//org.opensearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:882)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+       java.base@21.0.3/java.lang.Thread.runWith(Thread.java:1596)
+       java.base@21.0.3/java.lang.Thread.run(Thread.java:1583)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'opensearch[osbbackup101-monit-backup1_data2][normal_transfer_queue_consumer][T#14]'
+     10/10 snapshots sharing following 15 elements
+       java.base@21.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+       java.base@21.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.consume(SizeBasedBlockingQ.java:180)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.run(SizeBasedBlockingQ.java:161)
+       java.base@21.0.3/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+       java.base@21.0.3/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+       app//org.opensearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:882)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+       java.base@21.0.3/java.lang.Thread.runWith(Thread.java:1596)
+       java.base@21.0.3/java.lang.Thread.run(Thread.java:1583)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'opensearch[osbbackup101-monit-backup1_data2][normal_transfer_queue_consumer][T#13]'
+     10/10 snapshots sharing following 15 elements
+       java.base@21.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+       java.base@21.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.consume(SizeBasedBlockingQ.java:180)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.run(SizeBasedBlockingQ.java:161)
+       java.base@21.0.3/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+       java.base@21.0.3/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+       app//org.opensearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:882)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+       java.base@21.0.3/java.lang.Thread.runWith(Thread.java:1596)
+       java.base@21.0.3/java.lang.Thread.run(Thread.java:1583)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'opensearch[osbbackup101-monit-backup1_data2][normal_transfer_queue_consumer][T#12]'
+     10/10 snapshots sharing following 15 elements
+       java.base@21.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+       java.base@21.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.consume(SizeBasedBlockingQ.java:180)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.run(SizeBasedBlockingQ.java:161)
+       java.base@21.0.3/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+       java.base@21.0.3/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+       app//org.opensearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:882)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+       java.base@21.0.3/java.lang.Thread.runWith(Thread.java:1596)
+       java.base@21.0.3/java.lang.Thread.run(Thread.java:1583)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'opensearch[osbbackup101-monit-backup1_data2][normal_transfer_queue_consumer][T#10]'
+     10/10 snapshots sharing following 15 elements
+       java.base@21.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+       java.base@21.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.consume(SizeBasedBlockingQ.java:180)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.run(SizeBasedBlockingQ.java:161)
+       java.base@21.0.3/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+       java.base@21.0.3/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+       app//org.opensearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:882)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+       java.base@21.0.3/java.lang.Thread.runWith(Thread.java:1596)
+       java.base@21.0.3/java.lang.Thread.run(Thread.java:1583)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'opensearch[osbbackup101-monit-backup1_data2][normal_transfer_queue_consumer][T#9]'
+     10/10 snapshots sharing following 15 elements
+       java.base@21.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+       java.base@21.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.consume(SizeBasedBlockingQ.java:180)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.run(SizeBasedBlockingQ.java:161)
+       java.base@21.0.3/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+       java.base@21.0.3/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+       app//org.opensearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:882)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+       java.base@21.0.3/java.lang.Thread.runWith(Thread.java:1596)
+       java.base@21.0.3/java.lang.Thread.run(Thread.java:1583)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'opensearch[osbbackup101-monit-backup1_data2][normal_transfer_queue_consumer][T#8]'
+     10/10 snapshots sharing following 15 elements
+       java.base@21.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+       java.base@21.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.consume(SizeBasedBlockingQ.java:180)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.run(SizeBasedBlockingQ.java:161)
+       java.base@21.0.3/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+       java.base@21.0.3/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+       app//org.opensearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:882)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+       java.base@21.0.3/java.lang.Thread.runWith(Thread.java:1596)
+       java.base@21.0.3/java.lang.Thread.run(Thread.java:1583)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'opensearch[osbbackup101-monit-backup1_data2][normal_transfer_queue_consumer][T#7]'
+     10/10 snapshots sharing following 15 elements
+       java.base@21.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+       java.base@21.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.consume(SizeBasedBlockingQ.java:180)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.run(SizeBasedBlockingQ.java:161)
+       java.base@21.0.3/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+       java.base@21.0.3/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+       app//org.opensearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:882)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+       java.base@21.0.3/java.lang.Thread.runWith(Thread.java:1596)
+       java.base@21.0.3/java.lang.Thread.run(Thread.java:1583)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'opensearch[osbbackup101-monit-backup1_data2][normal_transfer_queue_consumer][T#6]'
+     10/10 snapshots sharing following 15 elements
+       java.base@21.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+       java.base@21.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.consume(SizeBasedBlockingQ.java:180)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.run(SizeBasedBlockingQ.java:161)
+       java.base@21.0.3/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+       java.base@21.0.3/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+       app//org.opensearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:882)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+       java.base@21.0.3/java.lang.Thread.runWith(Thread.java:1596)
+       java.base@21.0.3/java.lang.Thread.run(Thread.java:1583)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'opensearch[osbbackup101-monit-backup1_data2][normal_transfer_queue_consumer][T#5]'
+     10/10 snapshots sharing following 15 elements
+       java.base@21.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+       java.base@21.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.consume(SizeBasedBlockingQ.java:180)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.run(SizeBasedBlockingQ.java:161)
+       java.base@21.0.3/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+       java.base@21.0.3/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+       app//org.opensearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:882)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+       java.base@21.0.3/java.lang.Thread.runWith(Thread.java:1596)
+       java.base@21.0.3/java.lang.Thread.run(Thread.java:1583)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'opensearch[osbbackup101-monit-backup1_data2][normal_transfer_queue_consumer][T#4]'
+     10/10 snapshots sharing following 15 elements
+       java.base@21.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+       java.base@21.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.consume(SizeBasedBlockingQ.java:180)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.run(SizeBasedBlockingQ.java:161)
+       java.base@21.0.3/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+       java.base@21.0.3/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+       app//org.opensearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:882)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+       java.base@21.0.3/java.lang.Thread.runWith(Thread.java:1596)
+       java.base@21.0.3/java.lang.Thread.run(Thread.java:1583)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'opensearch[osbbackup101-monit-backup1_data2][normal_transfer_queue_consumer][T#3]'
+     10/10 snapshots sharing following 15 elements
+       java.base@21.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+       java.base@21.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.consume(SizeBasedBlockingQ.java:180)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.run(SizeBasedBlockingQ.java:161)
+       java.base@21.0.3/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+       java.base@21.0.3/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+       app//org.opensearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:882)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+       java.base@21.0.3/java.lang.Thread.runWith(Thread.java:1596)
+       java.base@21.0.3/java.lang.Thread.run(Thread.java:1583)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'opensearch[osbbackup101-monit-backup1_data2][normal_transfer_queue_consumer][T#2]'
+     10/10 snapshots sharing following 15 elements
+       java.base@21.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+       java.base@21.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.consume(SizeBasedBlockingQ.java:180)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.run(SizeBasedBlockingQ.java:161)
+       java.base@21.0.3/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+       java.base@21.0.3/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+       app//org.opensearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:882)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+       java.base@21.0.3/java.lang.Thread.runWith(Thread.java:1596)
+       java.base@21.0.3/java.lang.Thread.run(Thread.java:1583)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'opensearch[osbbackup101-monit-backup1_data2][normal_transfer_queue_consumer][T#1]'
+     10/10 snapshots sharing following 15 elements
+       java.base@21.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+       java.base@21.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.consume(SizeBasedBlockingQ.java:180)
+       org.opensearch.repositories.s3.async.SizeBasedBlockingQ$Consumer.run(SizeBasedBlockingQ.java:161)
+       java.base@21.0.3/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+       java.base@21.0.3/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+       app//org.opensearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:882)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+       java.base@21.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+       java.base@21.0.3/java.lang.Thread.runWith(Thread.java:1596)
+       java.base@21.0.3/java.lang.Thread.run(Thread.java:1583)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'Thread-6'
+     10/10 snapshots sharing following 8 elements
+       java.base@21.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+       java.base@21.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:221)
+       java.base@21.0.3/java.util.concurrent.FutureTask.awaitDone(FutureTask.java:500)
+       java.base@21.0.3/java.util.concurrent.FutureTask.get(FutureTask.java:190)
+       org.opensearch.performanceanalyzer.writer.EventLogQueueProcessor.lambda$scheduleExecutor$0(EventLogQueueProcessor.java:77)
+       org.opensearch.performanceanalyzer.writer.EventLogQueueProcessor$$Lambda/0x00007fcd28440c40.run(Unknown Source)
+       java.base@21.0.3/java.lang.Thread.runWith(Thread.java:1596)
+       java.base@21.0.3/java.lang.Thread.run(Thread.java:1583)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'JNA Cleaner'
+     10/10 snapshots sharing following 10 elements
+       java.base@21.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+       java.base@21.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+       java.base@21.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+       java.base@21.0.3/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:67)
+       java.base@21.0.3/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:158)
+       java.base@21.0.3/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:234)
+       app//com.sun.jna.internal.Cleaner$1.run(Cleaner.java:58)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'DefaultDispatcher-worker-2'
+     10/10 snapshots sharing following 6 elements
+       java.base@21.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+       java.base@21.0.3/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:410)
+       kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park(CoroutineScheduler.kt:783)
+       kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark(CoroutineScheduler.kt:728)
+       kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:711)
+       kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:665)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'opensearch[keepAlive/2.15.0]'
+     10/10 snapshots sharing following 8 elements
+       java.base@21.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+       java.base@21.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:221)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(AbstractQueuedSynchronizer.java:754)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly(AbstractQueuedSynchronizer.java:1099)
+       java.base@21.0.3/java.util.concurrent.CountDownLatch.await(CountDownLatch.java:230)
+       app//org.opensearch.bootstrap.Bootstrap$1.run(Bootstrap.java:102)
+       java.base@21.0.3/java.lang.Thread.runWith(Thread.java:1596)
+       java.base@21.0.3/java.lang.Thread.run(Thread.java:1583)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'DefaultDispatcher-worker-1'
+     10/10 snapshots sharing following 6 elements
+       java.base@21.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+       java.base@21.0.3/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:410)
+       kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.park(CoroutineScheduler.kt:783)
+       kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.tryPark(CoroutineScheduler.kt:728)
+       kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:711)
+       kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:665)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'Common-Cleaner'
+     10/10 snapshots sharing following 10 elements
+       java.base@21.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+       java.base@21.0.3/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+       java.base@21.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1847)
+       java.base@21.0.3/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+       java.base@21.0.3/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+       java.base@21.0.3/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+       java.base@21.0.3/jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:140)
+       java.base@21.0.3/java.lang.Thread.runWith(Thread.java:1596)
+       java.base@21.0.3/java.lang.Thread.run(Thread.java:1583)
+       java.base@21.0.3/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:186)
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'Notification Thread'
+     unique snapshot
+     unique snapshot
+     unique snapshot
+     unique snapshot
+     unique snapshot
+     unique snapshot
+     unique snapshot
+     unique snapshot
+     unique snapshot
+     unique snapshot
+   
+    0.0% (0s out of 500ms) cpu usage by thread 'DestroyJavaVM'
+     unique snapshot
+     unique snapshot
+     unique snapshot
+     unique snapshot
+     unique snapshot
+     unique snapshot
+     unique snapshot
+     unique snapshot
+     unique snapshot
+     unique snapshot
+
